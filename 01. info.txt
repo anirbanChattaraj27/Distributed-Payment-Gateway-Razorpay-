@@ -1,0 +1,7 @@
+we will create separate packages like, 
+    merchant service, payment service, operation service, vault service
+    and we will create entitie, controller service for each of  them
+
+    so the concept is like if there are 4 teams, these tasks will be distributed in 4 teams
+
+    and there is common package, where all codes are common for all of the team

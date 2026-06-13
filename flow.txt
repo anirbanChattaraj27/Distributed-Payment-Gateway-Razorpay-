@@ -1,0 +1,3 @@
+01. step 1: merchant package---> entity package ---> merchant class --->  AppUser class ---> customer class ---> apikey
+02. step 2: Payment package ---> entity package ---> OrderRecord class ---> Payment class
+03. step 3: common package ---> entity package ---> Money class (used to convert currency and identify currency rupee / dollar)

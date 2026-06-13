@@ -1,0 +1,11 @@
+ we'll create merchant class first, and it also doesnt have any Foreign Key
+as per image we will create all columns and rows in our merchant.java file
+and we will create enum for business type and merchant status
+
+after that we will create AppUser class and we will create specific enums for it
+and we'll create fields as per table shown in the image
+
+after that we will create Customer class
+
+after that ApiKey class
+
