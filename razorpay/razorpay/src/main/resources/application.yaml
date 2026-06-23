@@ -17,7 +17,7 @@
 #        dialect: org.hibernate.dialect.PostgreSQLDialect
 
 server:
-  port: 8081   # or any free port
+  port: 8082   # or any free port
 
 spring:
   application:

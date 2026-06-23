@@ -1,9 +1,11 @@
 package com.codingshuttle.razorpay.payment.entity;
 
+import com.codingshuttle.razorpay.common.entity.BaseEntity;
 import com.codingshuttle.razorpay.common.entity.Money;
 import com.codingshuttle.razorpay.common.enums.PaymentMethod;
 import com.codingshuttle.razorpay.common.enums.PaymentStatus;
 import jakarta.persistence.*;
+import lombok.*;
 import org.hibernate.annotations.JdbcTypeCode;
 import org.hibernate.type.SqlTypes;
 
@@ -12,8 +14,16 @@ import java.util.Map;
 import java.util.UUID;
 
 @Entity
-@Table(name = "payment")
-public class Payment {
+@Table(name = "payment", indexes = {
+        @Index(name = "idx_payment_order_id", columnList = "order_id"),
+        @Index(name = "idx_payment_merchant_id", columnList = "merchant_id")
+})
+@Getter
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor
+@Builder
+public class Payment extends BaseEntity {
 
     @Id
     @GeneratedValue(strategy = jakarta.persistence.GenerationType.UUID)
@@ -35,7 +45,7 @@ public class Payment {
 
     @Enumerated(EnumType.STRING)
     @Column(nullable = false, length = 30)
-    private PaymentStatus status; // created enum
+    private PaymentStatus status;
 
     @Column(nullable = false)
     private PaymentMethod method;
@@ -46,6 +56,9 @@ public class Payment {
 
     @Column(length = 100)
     private String bankReference;
+
+    @Column(length = 100)
+    private String processorReference;
 
     @Column(length = 100)
     private String errorCode;

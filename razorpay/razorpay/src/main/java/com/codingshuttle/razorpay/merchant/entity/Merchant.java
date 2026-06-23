@@ -1,20 +1,29 @@
 package com.codingshuttle.razorpay.merchant.entity;
 
+import com.codingshuttle.razorpay.common.entity.BaseEntity;
 import com.codingshuttle.razorpay.common.enums.BusinessType;
 import com.codingshuttle.razorpay.common.enums.MerchantStatus;
 import jakarta.persistence.*;
+import lombok.*;
 
 import java.util.UUID;
 
 @Entity
-@Table(name = "merchant")
-public class Merchant {
+@Table(name = "merchant", indexes = {
+        @Index(name = "idx_merchant_status", columnList = "status")
+})
+@Getter
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor
+@Builder
+public class Merchant  extends BaseEntity {
 
-    @Id 
-    @GeneratedValue(strategy = GenerationType.UUID) // this use asa auto generated value
+    @Id
+    @GeneratedValue(strategy = GenerationType.UUID)
     private UUID id;
 
-    @Column(nullable = false, length = 200) // name can't have more than 200 characters
+    @Column(nullable = false, length = 200)
     private String name;
 
     @Column(unique = true, nullable = false)

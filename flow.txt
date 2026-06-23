@@ -1,3 +1,8 @@
-01. step 1: merchant package---> entity package ---> merchant class --->  AppUser class ---> customer class ---> apikey
-02. step 2: Payment package ---> entity package ---> OrderRecord class ---> Payment class
-03. step 3: common package ---> entity package ---> Money class (used to convert currency and identify currency rupee / dollar)
+STEP 1: create all entities
+    01. step 1: merchant package---> entity package ---> merchant class --->  AppUser class ---> customer class ---> apikey
+    02. step 2: Payment package ---> entity package ---> OrderRecord class ---> Payment class
+    03. step 3: common package ---> entity package ---> Money class (used to convert currency and identify currency rupee / dollar)
+
+STEP 2: create API / RestAPIs
+    01. Merchant -----> Controller --> AuthController -----> Service --> AuthService(Interface) --> impl(implementation) --> AuthServiceImpl ----> Repository --> merchantRepository (for merchant entity) and AppUserRepository (for AppUser Entity)
+        AuthController --> DTO --> MerchantSignUpRequest and MerchantResponse
