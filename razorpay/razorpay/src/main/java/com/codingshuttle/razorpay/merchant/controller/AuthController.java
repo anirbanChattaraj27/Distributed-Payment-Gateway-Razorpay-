@@ -27,3 +27,13 @@ public class AuthController {
     }
 
 }
+/*
+HTTP Status code will be 201, and 201 is created
+
+• HttpStatus.OK → 200
+• HttpStatus.CREATED → 201
+• HttpStatus.NO_CONTENT → 204
+• HttpStatus.BAD_REQUEST → 400
+• HttpStatus.NOT_FOUND → 404
+
+ */

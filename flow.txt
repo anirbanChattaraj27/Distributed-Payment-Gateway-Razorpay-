@@ -5,4 +5,5 @@ STEP 1: create all entities
 
 STEP 2: create API / RestAPIs
     01. Merchant -----> Controller --> AuthController -----> Service --> AuthService(Interface) --> impl(implementation) --> AuthServiceImpl ----> Repository --> merchantRepository (for merchant entity) and AppUserRepository (for AppUser Entity)
-        AuthController --> DTO --> MerchantSignUpRequest and MerchantResponse
+        AuthController --> DTO --> MerchantSignUpRequest and MerchantResponse ---->
+    02. APIKey api --> same flow as per above

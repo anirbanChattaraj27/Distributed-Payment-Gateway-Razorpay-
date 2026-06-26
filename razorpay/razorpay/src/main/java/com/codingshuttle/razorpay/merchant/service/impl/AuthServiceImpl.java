@@ -50,9 +50,9 @@ public class AuthServiceImpl implements AuthService {
     }
 }
 
-
-
-
+/*
+while sign up, we need to check wheather that merchant is already match with DB or not using email
+ */
 
 
 
